@@ -1,0 +1,16 @@
+[Unit]
+Description=Synchronization of external hard drive service
+#After=network.target
+StartLimitIntervalSec=800
+StartLimitBurst=400
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=2
+User=root
+WorkingDirectory=/usr/local/bin/syncExtHdd
+ExecStart=poetry run psync -cfg /usr/local/bin/syncExtHdd/disks_to_sync.json -freq 2
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,8 @@
+{
+    "disks": [
+        {
+            "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "label": "myDisk"
+        }
+    ]
+}
