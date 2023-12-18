@@ -13,7 +13,7 @@ To have that script that sync periodically your hard drives:
   5. ``ln -s /usr/local/bin/syncExtHdd/systemd.service/sync_ext_hdd.service``
   6. ``systemctl enable sync_ext_hdd`` for automatic start at boot
   7. ``systemctl start sync_ext_hdd`` to start it now
-  8. ``systemctl -u sync_ext_hdd -f`` to see the logs (after 2 minutes)
+  8. ``journalctl -u sync_ext_hdd -f`` to see the logs (after 2 minutes)
 
 To have that script that sync your hard drives when you suspend or hibernate your computer:
   1. ``sudo su`` (login as root)
