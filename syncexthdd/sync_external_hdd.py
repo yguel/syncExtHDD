@@ -115,12 +115,12 @@ def main(config : str, frequency : Optional[int] = None):
                     else:
                         print("Synced disk: {}".format(uuid))
             else:
-                if "label" in disk_uuid:
+                if "label" in disk:
                     print("Failed to sync disk: {} ({})".format(label, uuid))
                 else:
                     print("Failed to sync disk: {}".format(uuid))
                 if frequency is not None:
-                    log[uuid]["nb_sync_error"] += 1
+                    logs[uuid]["nb_sync_error"] += 1
             
         # Handle frequency
         if frequency is None:
